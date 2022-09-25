@@ -1,6 +1,7 @@
 package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
+import com.kweezy.ObjectWriter;
 
 import java.io.IOException;
 
@@ -13,9 +14,12 @@ public final class StringConstantValue implements i<String> {
 
     @Override
     public void readData(final ObjectReader a) throws IOException {
-
         this.str = a.readUTF();
-        System.out.println("[Debug] StringConst \"" + str + "\"");
+    }
+
+    @Override
+    public void writeData(final ObjectWriter b) throws IOException {
+        b.writeUTF(this.str);
     }
 
     @Override

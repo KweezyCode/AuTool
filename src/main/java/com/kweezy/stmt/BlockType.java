@@ -26,6 +26,10 @@ public interface BlockType extends readWriteData {
         }
     };
 
-    long id();
+    long id(); // block's ID on flowchart
+
+    int x(); // block's X coordinate on flowchart
+
+    int y(); // block's Y coordinate on flowchart
 
 }

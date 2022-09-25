@@ -1,6 +1,7 @@
 package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
+import com.kweezy.ObjectWriter;
 
 import java.io.IOException;
 
@@ -13,9 +14,9 @@ public abstract class Action extends AbstractStatement {
         this.onComplete = a.readObject();
     }
 
-    //@Override
-    //public void writeBlockData(final ObjectWriter b) {
-    //    super.writeBlockData(b);
-    //    b.writeObject(this.onComplete);
-    //}
+    @Override
+    public void writeData(final ObjectWriter b) throws IOException {
+        super.writeData(b);
+        b.writeObject(this.onComplete);
+    }
 }

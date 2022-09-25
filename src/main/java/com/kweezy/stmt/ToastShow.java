@@ -1,6 +1,7 @@
 package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
+import com.kweezy.ObjectWriter;
 
 import java.io.IOException;
 
@@ -18,13 +19,13 @@ public class ToastShow extends Action {
         }
     }
 
-    // @Override
-    // public void writeBlockData(final ObjectWriter writer) {
-    //     super.writeBlockData(writer);
-    //     writer.writeObject(this.message);
-    //     if (46 <= writer.version()) {
-    //         writer.writeObject(this.duration);
-    //     }
-    // }
+    @Override
+    public void writeData(final ObjectWriter writer) throws IOException {
+        super.writeData(writer);
+        writer.writeObject(this.message);
+        if (46 <= writer.version()) {
+            writer.writeObject(this.duration);
+        }
+    }
 
 }

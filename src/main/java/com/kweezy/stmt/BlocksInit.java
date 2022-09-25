@@ -1,6 +1,7 @@
 package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
+import com.kweezy.ObjectWriter;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -12,6 +13,10 @@ public class BlocksInit {
     private final PreparedBlock<?>[] preparedblocks;
     private final Map<Class<?>, PreparedBlock<?>> idtoblock;
 
+
+    public <T> PreparedBlock<T> c(final Class<T> clazz) {
+        return (PreparedBlock<T>)this.idtoblock.get(clazz);
+    }
 
     public BlocksInit(final PreparedBlock<?>... a) {
         this.preparedblocks = a;
@@ -47,23 +52,28 @@ public class BlocksInit {
         return null;
     }
 
-    private static class PrepareStmt<T> extends PreparedBlock<T> {
+    private static class PrepareStmt<T extends readWriteData> extends PreparedBlock<T> {
 
         public PrepareStmt(int id, final Class<T> cl) {
             super(id, cl);
         }
 
         @Override
-        public T addToChain(ObjectReader p0) {
+        public T read(ObjectReader reader) {
             try {
                 final readWriteData statement = (readWriteData) super.blockClass.getDeclaredConstructor().newInstance();
-                p0.addBlockToBlocksArray(statement).readData(p0);
+                reader.addBlockToBlocksArray(statement).readData(reader);
 
                 return (T) statement;
             } catch (InstantiationException | IllegalAccessException | InvocationTargetException |
                      NoSuchMethodException | IOException e) {
                 throw new RuntimeException(e);
             }
+        }
+
+        @Override
+        public void write(final ObjectWriter writer, final T p1) throws IOException {
+            p1.writeData(writer);
         }
     }
 

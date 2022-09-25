@@ -83,7 +83,7 @@ public class ObjectReader extends Readers {
 
         final PreparedBlock<Object> blk = BlocksInit.get().getBlockById(onCompleteIndex);
         if (blk != null) {
-            return (T) blk.addToChain(this);
+            return (T) blk.read(this);
         }
 
         //final PreparedBlocks<Object> blk = BlocksInit.a().getStatementById(onCompleteIndex); // :(

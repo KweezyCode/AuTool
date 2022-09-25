@@ -1,7 +1,9 @@
 package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
+import com.kweezy.ObjectWriter;
 
+import java.io.IOException;
 import java.util.Comparator;
 
 public abstract class PreparedBlock<T>
@@ -23,7 +25,7 @@ public abstract class PreparedBlock<T>
         this.blockClass = c;
     }
 
-    public abstract T addToChain(final ObjectReader p0);
+    public abstract T read(final ObjectReader reader);
 
-    // public abstract void b(final ObjectWriter p0, final T p1);
+    public abstract void write(final ObjectWriter writer, final T p1) throws IOException;
 }

@@ -1,28 +1,28 @@
 package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
+import com.kweezy.ObjectWriter;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 
 public class AbstractStatement implements BlockType {
-    private long id;
-    private int x;
-    private int y;
-    private int onComplete;
-
-    public void readBlockHeader(DataInputStream dis) throws IOException {
-        id = dis.readInt();
-        x = dis.readInt();
-        y = dis.readInt();
-        onComplete = dis.readInt();
-    }
+    public long id;
+    public int x;
+    public int y;
 
     @Override
     public void readData(final ObjectReader a) throws IOException {
         this.id = a.transform_63();
         this.x = a.transform_35();
         this.y = a.transform_35();
+    }
+
+    @Override
+    public void writeData(final ObjectWriter b) throws IOException {
+        b.transform_63(this.id);
+        b.transform_35(this.x);
+        b.transform_35(this.y);
     }
 
     @Override

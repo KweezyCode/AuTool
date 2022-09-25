@@ -1,6 +1,7 @@
 package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
+import com.kweezy.ObjectWriter;
 
 import java.io.IOException;
 
@@ -22,5 +23,11 @@ public final class AutomateString implements readWriteData {
         this.str = a.readUTF();
         System.out.println(str);
     }
+
+    @Override
+    public void writeData(final ObjectWriter b) throws IOException {
+        b.writeUTF(this.str);
+    }
+
 
 }

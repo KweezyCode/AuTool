@@ -1,32 +1,61 @@
 package com.kweezy;
 
 import com.kweezy.stmt.BlockType;
+import com.kweezy.stmt.ToastShow;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
+
+import static java.lang.Math.sin;
 
 public class Main {
     //static List<Object> blocks = new ArrayList<>();
 
-    private static BlockType[] blocks;
+    // private static BlockType[] blocks;
+
+    private static ArrayList<BlockType> blocksnew = new ArrayList<>();
     private static long lastStmtId;
 
     public static void main(String[] args) throws Exception {
         try {
-            DataInputStream file = getData("HelloWorldToast.flo");
+            DataInputStream in = getData("HelloWorldToast.flo");
 
-            ObjectReader a = new ObjectReader(file);
+            ObjectReader a = new ObjectReader(in);
             final int i = readerFileHeader(a, true);
             if (i == 0) {
                 return;
             }
 
-            blocks = new BlockType[i]; // Block type? wtf is that
+
+            //blocks = new BlockType[i];
             for (int j = 0; j < i; ++j) {
-                blocks[j] = a.readObject();
-                System.out.println(blocks[j]);
+                //blocks[j] = a.readObject();
+                blocksnew.add(a.readObject());
+
             }
+
+            long counter = lastStmtId + 1;
+            for(double x=-450;x<=450;x=x+0.5) {
+                double y = 50 * sin(x * (3.1415926 / 180));
+                int Y = (int) y;
+                int X = (int) x;
+                blocksnew.add(generateToastBlock(counter, X, Y));
+                counter++;
+            }
+            // for (long jj = lastStmtId; jj < 1000; ++jj) {
+            //     blocksnew.add(generateToastBlock(jj+1, (int) jj, (int) jj));
+            // }
+
+
+            DataOutputStream out = new DataOutputStream(new FileOutputStream("auto-generated.flo"));
+
+            ObjectWriter b = new ObjectWriter(out);
+            writeFileHeader(b);
+
+            for (int length = blocksnew.size(), ii = 0; ii < length; ++ii) {
+                b.writeObject(blocksnew.get(ii));
+            }
+
 
             //final BlockType[] a2 = new BlockType[i];
             //System.arraycopy(this.x1, 0, a2, 0, i);
@@ -34,7 +63,6 @@ public class Main {
 
         } catch (IOException e) {
             System.out.println(e.toString());
-            System.out.println("File is missing, stopping");
         }
 
     }
@@ -58,6 +86,24 @@ public class Main {
         sb.append("Bad magic: 0x");
         sb.append(Integer.toHexString(int1));
         throw new StreamCorruptedException(sb.toString());
+    }
+
+    public static void writeFileHeader(final ObjectWriter writer) throws IOException {
+        writer.writeInt(1279346284);
+        writer.writeVersion(96);
+        writer.setStringFlag(true);
+        writer.transform_63(lastStmtId);
+        writer.unsigned_35(blocksnew.size());
+
+    }
+
+    public static ToastShow generateToastBlock(long id, int x, int y) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+        ToastShow blk = (ToastShow)((Class<? extends BlockType>) Class.forName("com.kweezy.stmt.ToastShow")).newInstance();
+        blk.x = x;
+        blk.y = y;
+        blk.id = id;
+
+        return blk;
     }
 
     public static DataInputStream getData(String file) throws IOException {
