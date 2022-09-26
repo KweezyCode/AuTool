@@ -2,7 +2,7 @@ package com.kweezy;
 
 import com.kweezy.stmt.BlocksInit;
 import com.kweezy.stmt.PreparedBlock;
-import com.kweezy.stmt.readWriteData;
+import com.kweezy.stmt.interfaces.readWriteData;
 
 import java.io.IOException;
 import java.io.InvalidObjectException;

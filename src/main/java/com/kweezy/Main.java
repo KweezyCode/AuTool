@@ -1,12 +1,13 @@
 package com.kweezy;
 
-import com.kweezy.stmt.BlockType;
-import com.kweezy.stmt.ToastShow;
+import com.kweezy.stmt.*;
+import com.kweezy.stmt.interfaces.AutomateField;
+import com.kweezy.stmt.interfaces.BlockType;
 
 import java.io.*;
 import java.util.ArrayList;
 
-import static java.lang.Math.sin;
+import static java.lang.Math.sqrt;
 
 public class Main {
     //static List<Object> blocks = new ArrayList<>();
@@ -18,7 +19,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         try {
-            DataInputStream in = getData("HelloWorldToast.flo");
+            DataInputStream in = getData("DAB.flo");
 
             ObjectReader a = new ObjectReader(in);
             final int i = readerFileHeader(a, true);
@@ -31,20 +32,36 @@ public class Main {
             for (int j = 0; j < i; ++j) {
                 //blocks[j] = a.readObject();
                 blocksnew.add(a.readObject());
+                System.out.println(blocksnew.get(j));
 
             }
+            blocksnew.sort(BlockType.comparator); // Sort after reading
+            
+            // ------------ Main Part START ------------
 
-            long counter = lastStmtId + 1;
-            for(double x=-450;x<=450;x=x+0.5) {
-                double y = 50 * sin(x * (3.1415926 / 180));
-                int Y = (int) y;
-                int X = (int) x;
-                blocksnew.add(generateToastBlock(counter, X, Y));
-                counter++;
+            int maxx = (int) sqrt(blocksnew.size())-1;
+
+            int yy = 0;
+            int xx = 0;
+
+            for (BlockType ii : blocksnew) {
+                AbstractStatement as = (AbstractStatement) ii;
+                as.x = xx * 8;
+                as.y = yy * 6;
+
+                if (xx < maxx) {
+                    xx++;
+                }
+                else {
+                    yy++;
+                    xx = 0;
+                }
             }
-            // for (long jj = lastStmtId; jj < 1000; ++jj) {
-            //     blocksnew.add(generateToastBlock(jj+1, (int) jj, (int) jj));
-            // }
+
+            
+            // ------------ Main Part END ------------
+            
+
 
 
             DataOutputStream out = new DataOutputStream(new FileOutputStream("auto-generated.flo"));
@@ -52,14 +69,11 @@ public class Main {
             ObjectWriter b = new ObjectWriter(out);
             writeFileHeader(b);
 
+
+            blocksnew.sort(BlockType.comparator); // Sort before writing
             for (int length = blocksnew.size(), ii = 0; ii < length; ++ii) {
                 b.writeObject(blocksnew.get(ii));
             }
-
-
-            //final BlockType[] a2 = new BlockType[i];
-            //System.arraycopy(this.x1, 0, a2, 0, i);
-            //Arrays.sort(a2, BlockType.e); // TODO: Sort blocks by BlockType.e
 
         } catch (IOException e) {
             System.out.println(e.toString());
@@ -97,13 +111,23 @@ public class Main {
 
     }
 
-    public static ToastShow generateToastBlock(long id, int x, int y) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-        ToastShow blk = (ToastShow)((Class<? extends BlockType>) Class.forName("com.kweezy.stmt.ToastShow")).newInstance();
+    public static AbstractStatement generateBlock(String classname, int x, int y) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+        x = x * 8;
+        y = y * 6;
+        lastStmtId++;
+        AbstractStatement blk = (AbstractStatement) ((Class<? extends BlockType>) Class.forName(classname)).newInstance();
+
         blk.x = x;
         blk.y = y;
-        blk.id = id;
+        blk.id = lastStmtId;
 
         return blk;
+    }
+
+    public static AutomateField generateFieldValue(String classname) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+        AutomateField field = (AutomateField) ((Class<? extends AutomateField>) Class.forName(classname)).newInstance();
+
+        return field;
     }
 
     public static DataInputStream getData(String file) throws IOException {

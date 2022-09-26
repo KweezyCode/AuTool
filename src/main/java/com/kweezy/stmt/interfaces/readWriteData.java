@@ -1,4 +1,4 @@
-package com.kweezy.stmt;
+package com.kweezy.stmt.interfaces;
 
 import com.kweezy.ObjectReader;
 import com.kweezy.ObjectWriter;

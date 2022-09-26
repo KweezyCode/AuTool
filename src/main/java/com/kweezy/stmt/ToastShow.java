@@ -2,13 +2,15 @@ package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
 import com.kweezy.ObjectWriter;
+import com.kweezy.stmt.actions.Action;
+import com.kweezy.stmt.interfaces.AutomateField;
 
 import java.io.IOException;
 
-public class ToastShow extends Action {
+public final class ToastShow extends Action {
 
-    public automateField duration;
-    public automateField message;
+    public AutomateField duration;
+    public AutomateField message;
 
     @Override
     public void readData(final ObjectReader reader) throws IOException {

@@ -2,8 +2,8 @@ package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
 import com.kweezy.ObjectWriter;
+import com.kweezy.stmt.interfaces.BlockType;
 
-import java.io.DataInputStream;
 import java.io.IOException;
 
 public class AbstractStatement implements BlockType {

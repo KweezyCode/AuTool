@@ -25,7 +25,7 @@ public abstract class PreparedBlock<T>
         this.blockClass = c;
     }
 
-    public abstract T read(final ObjectReader reader);
+    public abstract T read(final ObjectReader reader) throws IOException;
 
     public abstract void write(final ObjectWriter writer, final T p1) throws IOException;
 }

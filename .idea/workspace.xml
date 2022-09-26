@@ -4,22 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f90928fe-4779-4b2a-bd59-9862c23b9bce" name="Changes" comment="First stable release (BETA)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/ObjectWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/Writers.java" afterDir="false" />
+    <list default="true" id="f90928fe-4779-4b2a-bd59-9862c23b9bce" name="Changes" comment="ObjectWriter was added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/AccountPick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/AutomateNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/BinaryFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/ContentCopy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/FileDelete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/FlowBeginning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Fork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Formatting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/GDriveUpload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Negate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/NotificationShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/OneField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Split.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/StringInterpolation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/SubscriptOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/TimeAwait.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/TimePick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/TwoFields.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/ActivityDecision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/Decision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/GDriveAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/GDriveTransferAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/IntermittentAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/IntermittentDecision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/interfaces/AutomateField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/interfaces/functionName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/interfaces/i.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/ObjectReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/ObjectReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/ObjectWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/ObjectWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/Utils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/AbstractStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/AbstractStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/Action.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/AutomateString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/AutomateString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/BlockType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/BlockType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/BlockType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/interfaces/BlockType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/BlocksInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/BlocksInit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/PreparedBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/PreparedBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/StringConstantValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/StringConstantValue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/ToastShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/ToastShow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/i.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/i.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/readWriteData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/readWriteData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/automateField.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/i.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/readWriteData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/interfaces/readWriteData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +74,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2F5f7nTccB5HhKRgzn6ecRPWIIS" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,6 +94,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kweezy.stmt.actions" />
       <recent name="com.kweezy.stmt" />
     </key>
   </component>
@@ -88,7 +119,7 @@
       <updated>1663786702237</updated>
       <workItem from="1663786704797" duration="1020000" />
       <workItem from="1663937246243" duration="32845000" />
-      <workItem from="1664033933465" duration="26764000" />
+      <workItem from="1664033933465" duration="45421000" />
     </task>
     <task id="LOCAL-00001" summary="First stable release (BETA)">
       <created>1664131599862</created>
@@ -97,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664131599862</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ObjectWriter was added">
+      <created>1664149045068</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664149045068</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,16 +154,28 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First stable release (BETA)" />
-    <option name="LAST_COMMIT_MESSAGE" value="First stable release (BETA)" />
+    <MESSAGE value="ObjectWriter was added" />
+    <option name="LAST_COMMIT_MESSAGE" value="ObjectWriter was added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.RuntimeException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/IntermittentAction.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kweezy/stmt/BinaryFunction.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.kweezy.ObjectWriter" memberName="x0" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

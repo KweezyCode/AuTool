@@ -96,6 +96,14 @@ public class ObjectReader extends Readers {
         throw new InvalidObjectException(sb2.toString());
     }
 
+    public String o() throws IOException {
+        String utf = this.readUTF();
+        if (utf.length() == 0) {
+            utf = null;
+        }
+        return utf;
+    }
+
     @Override
     public String readUTF() throws IOException {
         String s;

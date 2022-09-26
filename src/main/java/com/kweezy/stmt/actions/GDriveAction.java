@@ -1,22 +1,24 @@
-package com.kweezy.stmt;
+package com.kweezy.stmt.actions;
 
 import com.kweezy.ObjectReader;
 import com.kweezy.ObjectWriter;
+import com.kweezy.stmt.interfaces.AutomateField;
 
 import java.io.IOException;
 
-public abstract class Action extends AbstractStatement {
+public abstract class GDriveAction extends Action // implements IntentStatement, AsyncStatement, Statement
+{
+    public AutomateField account;
 
-    public BlockType onComplete;
     @Override
     public void readData(final ObjectReader a) throws IOException {
         super.readData(a);
-        this.onComplete = a.readObject();
+        this.account = a.readObject();
     }
 
     @Override
     public void writeData(final ObjectWriter b) throws IOException {
         super.writeData(b);
-        b.writeObject(this.onComplete);
+        b.writeObject(this.account);
     }
 }

@@ -2,10 +2,12 @@ package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
 import com.kweezy.ObjectWriter;
+import com.kweezy.stmt.interfaces.AutomateField;
+import com.kweezy.stmt.interfaces.readWriteData;
 
 import java.io.IOException;
 
-public final class AutomateString implements readWriteData {
+public final class AutomateString implements readWriteData, AutomateField {
 
     public static final AutomateString[] x0;
     private int x1;
@@ -19,9 +21,7 @@ public final class AutomateString implements readWriteData {
 
     @Override
     public void readData(final ObjectReader a) throws IOException {
-
         this.str = a.readUTF();
-        System.out.println(str);
     }
 
     @Override
@@ -29,5 +29,9 @@ public final class AutomateString implements readWriteData {
         b.writeUTF(this.str);
     }
 
+    @Override
+    public String prettyPrint(final int n) {
+        return this.str;
+    }
 
 }

@@ -2,12 +2,13 @@ package com.kweezy.stmt;
 
 import com.kweezy.ObjectReader;
 import com.kweezy.ObjectWriter;
+import com.kweezy.stmt.interfaces.i;
 
 import java.io.IOException;
 
 public final class StringConstantValue implements i<String> {
 
-    private String str;
+    public String str;
 
     public StringConstantValue() {
     }
@@ -23,8 +24,8 @@ public final class StringConstantValue implements i<String> {
     }
 
     @Override
-    public String o(int p0) {
-        return null;
+    public String prettyPrint(int p0) {
+        return Formatting.constantString(this.str, p0);
     }
 
     @Override
