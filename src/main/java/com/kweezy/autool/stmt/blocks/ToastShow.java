@@ -7,7 +7,8 @@ import com.kweezy.autool.stmt.interfaces.AutomateField;
 
 import java.io.IOException;
 
-public final class ToastShow extends Action {
+// Block is ready
+public class ToastShow extends Action {
 
     public AutomateField duration;
     public AutomateField message;

@@ -7,6 +7,7 @@ import com.kweezy.autool.stmt.interfaces.AutomateField;
 
 import java.io.IOException;
 
+// Block is ready
 public class TimeAwait extends IntermittentAction { // implements IntentStatement, AsyncStatement, b3
     private int c4;
     public AutomateField dayOfMonth;
@@ -17,6 +18,9 @@ public class TimeAwait extends IntermittentAction { // implements IntentStatemen
     public AutomateField weekdays;
     public AutomateField year;
 
+    public TimeAwait() {
+        this.c4 = -1;
+    }
     @Override
     public void readData(final ObjectReader a) throws IOException {
         super.readData(a);

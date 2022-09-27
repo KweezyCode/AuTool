@@ -4,50 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f90928fe-4779-4b2a-bd59-9862c23b9bce" name="Changes" comment="Shuffle example flow">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/GDriveUpload.java" afterDir="false" />
+    <list default="true" id="f90928fe-4779-4b2a-bd59-9862c23b9bce" name="Changes" comment="Some needed classes added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/actions/ActivityAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/actions/ArraySubscriptAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ArrayAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ContentQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/DialogChoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/DialogMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ExpressionDecision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/FileExists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/FileMakeDirectory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/FileRead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/FileWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ForEach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ImageSampleColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/Ping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/VariableAssign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/functions/JsonDecode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/functions/JsonEncode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/functions/Random.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/functions/Storage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/functions/Trim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/Addition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/AutomateArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/CompareTwoFields.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/ConversionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/Equals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/HexNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/UnaryFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/e0.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/ObjectReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/ObjectReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/ObjectWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/ObjectWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/Readers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/Readers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/Writers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/Writers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/AbstractStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/AbstractStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/AccountPick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/AccountPick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/AutomateNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/AutomateNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/AutomateString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/AutomateString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/BinaryFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/BinaryFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/BlocksInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/BlocksInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/ContentCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ContentCopy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/FileDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/FileDelete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/FlowBeginning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/FlowBeginning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Fork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/Fork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Formatting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/Formatting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/GDriveUpload.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Negate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/Negate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/NotificationShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/NotificationShow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/OneField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/OneField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/PreparedBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/PreparedStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/Split.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/functions/Split.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/StringConstantValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/StringConstantValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/StringInterpolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/StringInterpolation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/SubscriptOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/SubscriptOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/TimeAwait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/TimeAwait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/TimePick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/TimePick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/ToastShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ToastShow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/TwoFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/TwoFields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/actions/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/ActivityDecision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/actions/ActivityDecision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/Decision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/actions/Decision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/GDriveAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/actions/GDriveAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/GDriveTransferAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/actions/GDriveTransferAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/IntermittentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/actions/IntermittentAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/actions/IntermittentDecision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/actions/IntermittentDecision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/interfaces/AutomateField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/interfaces/AutomateField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/interfaces/BlockType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/interfaces/BlockType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/interfaces/functionName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/interfaces/functionName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/interfaces/i.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/interfaces/i.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/stmt/interfaces/readWriteData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/interfaces/readWriteData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/BlocksInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/BlocksInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/Formatting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/Formatting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/AccountPick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/AccountPick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ContentCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ContentCopy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/FileDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/FileDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/FlowBeginning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/FlowBeginning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/Fork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/Fork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/GDriveUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/GDriveUpload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/NotificationShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/NotificationShow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/TimeAwait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/TimeAwait.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/TimePick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/TimePick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ToastShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ToastShow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/interfaces/i.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/interfaces/customValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/AutomateNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/AutomateNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/AutomateString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/VariableName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/StringConstantValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/StringConstantValue.java" afterDir="false" />
+    </list>
+    <list id="43bc3ed4-f995-4434-ba57-aaff479b432a" name="Changes by hikunach" comment="Some needed classes added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/BatteryCharging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/BatteryProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ImageCrop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ImageFlip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ImageRescale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/blocks/ImageRotate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +70,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -81,19 +105,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kweezy/Desktop/AutomateReverse&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/Kweezy/Desktop/AutomateReverse",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kweezy.autool.stmt" />
+      <recent name="com.kweezy.autool.stmt.blocks" />
       <recent name="com.kweezy.stmt.actions" />
       <recent name="com.kweezy.stmt" />
     </key>
@@ -120,6 +148,7 @@
       <workItem from="1663786704797" duration="1020000" />
       <workItem from="1663937246243" duration="32845000" />
       <workItem from="1664033933465" duration="45421000" />
+      <workItem from="1664293291306" duration="314000" />
     </task>
     <task id="LOCAL-00001" summary="First stable release (BETA)">
       <created>1664131599862</created>
@@ -135,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664149045068</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactor code">
+      <created>1664217069092</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664217069092</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +182,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -155,7 +203,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First stable release (BETA)" />
     <MESSAGE value="ObjectWriter was added" />
-    <option name="LAST_COMMIT_MESSAGE" value="ObjectWriter was added" />
+    <MESSAGE value="Refactor code" />
+    <MESSAGE value="Some needed classed added" />
+    <MESSAGE value="Some needed classes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some needed classes added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -164,11 +215,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/actions/IntermittentAction.java</url>
           <line>14</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kweezy/autool/stmt/types/BinaryFunction.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

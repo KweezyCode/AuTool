@@ -4,11 +4,12 @@ import com.kweezy.autool.ObjectReader;
 import com.kweezy.autool.ObjectWriter;
 import com.kweezy.autool.stmt.actions.IntermittentDecision;
 import com.kweezy.autool.stmt.interfaces.AutomateField;
-import com.kweezy.autool.stmt.types.AutomateString;
+import com.kweezy.autool.stmt.types.VariableName;
 
 import java.io.IOException;
 
-public final class NotificationShow extends IntermittentDecision // implements AsyncStatement, IntentStatement
+// Block is ready
+public class NotificationShow extends IntermittentDecision // implements AsyncStatement, IntentStatement
 {
     @Deprecated
     private AutomateField c4;
@@ -30,7 +31,7 @@ public final class NotificationShow extends IntermittentDecision // implements A
     public AutomateField pictureUri;
     public AutomateField progress;
     public AutomateField title;
-    public AutomateString varKey;
+    public VariableName varKey;
     public AutomateField visibility;
 
     @Override

@@ -2,16 +2,17 @@ package com.kweezy.autool.stmt.blocks;
 
 import com.kweezy.autool.ObjectReader;
 import com.kweezy.autool.ObjectWriter;
-import com.kweezy.autool.stmt.types.AutomateString;
+import com.kweezy.autool.stmt.types.VariableName;
 import com.kweezy.autool.stmt.actions.ActivityDecision;
 import com.kweezy.autool.stmt.interfaces.AutomateField;
 
 import java.io.IOException;
 
+// Block is ready
 public class AccountPick extends ActivityDecision {
     public AutomateField accountType;
-    public AutomateString varPickedAccountName;
-    public AutomateString varPickedAccountType;
+    public VariableName varPickedAccountName;
+    public VariableName varPickedAccountType;
 
     @Override
     public void readData(final ObjectReader a) throws IOException {

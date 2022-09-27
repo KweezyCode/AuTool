@@ -1,6 +1,6 @@
 package com.kweezy.autool.stmt.interfaces;
 
-public interface i<T> extends AutomateField // TODO: Rename
+public interface customValue<T> extends AutomateField
 {
     T value();
 }

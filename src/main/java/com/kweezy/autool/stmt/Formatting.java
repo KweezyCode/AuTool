@@ -15,7 +15,7 @@ public class Formatting {
             Label_0060_Outer:
             while (--n2 >= 0) {
                 final char char1 = charSequence.charAt(n);
-                Label_0052_Outer:
+                Label_0052_Outer: // TODO: Stolen code, should be fixed
                 while (true) {
                     Label_0060:
                     while (true) {
@@ -106,7 +106,7 @@ public class Formatting {
         }
     }
 
-    public static String n0(int i, String str, final AutomateField... array) {
+    public static String n0(int i, String str, final AutomateField... array) { // TODO: Rename
         final StringBuilder sb = new StringBuilder();
         int n = 0;
         if ((i & 0x1) != 0x0) {

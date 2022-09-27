@@ -7,23 +7,19 @@ import com.kweezy.autool.stmt.interfaces.AutomateField;
 
 import java.io.IOException;
 
-// Block is ready
-public class FileDelete extends Action // implements AsyncStatement
+public final class FileMakeDirectory extends Action // implements AsyncStatement
 {
     public AutomateField path;
-    public AutomateField recursive;
 
     @Override
     public void readData(final ObjectReader a) throws IOException {
         super.readData(a);
         this.path = a.readObject();
-        this.recursive = a.readObject();
     }
 
     @Override
     public void writeData(final ObjectWriter b) throws IOException {
         super.writeData(b);
         b.writeObject(this.path);
-        b.writeObject(this.recursive);
     }
 }

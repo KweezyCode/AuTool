@@ -7,16 +7,16 @@ import com.kweezy.autool.stmt.interfaces.readWriteData;
 
 import java.io.IOException;
 
-public final class AutomateString implements readWriteData, AutomateField {
+public final class VariableName implements readWriteData, AutomateField {
 
-    public static final AutomateString[] x0;
+    public static final VariableName[] x0;
     private int x1;
     private String str;
 
     static {
-        x0 = new AutomateString[0];
+        x0 = new VariableName[0];
     }
-    public AutomateString() {
+    public VariableName() {
     }
 
     @Override

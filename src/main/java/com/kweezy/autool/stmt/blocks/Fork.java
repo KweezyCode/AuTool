@@ -4,15 +4,16 @@ import com.kweezy.autool.ObjectReader;
 import com.kweezy.autool.ObjectWriter;
 import com.kweezy.autool.stmt.actions.Action;
 import com.kweezy.autool.stmt.interfaces.BlockType;
-import com.kweezy.autool.stmt.types.AutomateString;
+import com.kweezy.autool.stmt.types.VariableName;
 
 import java.io.IOException;
 
+// Block is ready
 public class Fork extends Action {
     public BlockType onChildFiber;
     public boolean stopWithParent;
-    public AutomateString varChildFiberUri;
-    public AutomateString varParentFiberUri;
+    public VariableName varChildFiberUri;
+    public VariableName varParentFiberUri;
 
 
     @Override

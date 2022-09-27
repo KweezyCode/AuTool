@@ -4,14 +4,15 @@ import com.kweezy.autool.ObjectReader;
 import com.kweezy.autool.ObjectWriter;
 import com.kweezy.autool.stmt.actions.ActivityDecision;
 import com.kweezy.autool.stmt.interfaces.AutomateField;
-import com.kweezy.autool.stmt.types.AutomateString;
+import com.kweezy.autool.stmt.types.VariableName;
 
 import java.io.IOException;
 
+// Block is ready
 public class TimePick extends ActivityDecision {
     public AutomateField initialTimeOfDay;
     public AutomateField style;
-    public AutomateString varTimeOfDay;
+    public VariableName varTimeOfDay;
 
 
     @Override

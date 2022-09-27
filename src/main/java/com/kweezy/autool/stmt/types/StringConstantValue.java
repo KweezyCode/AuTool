@@ -3,11 +3,11 @@ package com.kweezy.autool.stmt.types;
 import com.kweezy.autool.ObjectReader;
 import com.kweezy.autool.ObjectWriter;
 import com.kweezy.autool.stmt.Formatting;
-import com.kweezy.autool.stmt.interfaces.i;
+import com.kweezy.autool.stmt.interfaces.customValue;
 
 import java.io.IOException;
 
-public final class StringConstantValue implements i<String> {
+public final class StringConstantValue implements customValue<String> {
 
     public String str;
 

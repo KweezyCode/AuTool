@@ -3,16 +3,17 @@ package com.kweezy.autool.stmt.blocks;
 import com.kweezy.autool.ObjectReader;
 import com.kweezy.autool.ObjectWriter;
 import com.kweezy.autool.stmt.actions.Action;
-import com.kweezy.autool.stmt.types.AutomateString;
+import com.kweezy.autool.stmt.types.VariableName;
 
 import java.io.IOException;
 
-public final class FlowBeginning extends Action {
+// Block is ready
+public class FlowBeginning extends Action {
     public boolean hidden;
     public boolean parallel;
     public String title;
-    public AutomateString varFiberUri;
-    public AutomateString varPayload;
+    public VariableName varFiberUri;
+    public VariableName varPayload;
 
     @Override
     public void readData(final ObjectReader a) throws IOException {

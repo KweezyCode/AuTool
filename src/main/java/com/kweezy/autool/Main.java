@@ -19,71 +19,68 @@ public class Main {
     private static long lastStmtId;
 
     public static void main(String[] args) throws Exception {
-        try {
-            DataInputStream in = getData("DAB.flo");
 
-            ObjectReader a = new ObjectReader(in);
-            final int i = readerFileHeader(a, true);
-            if (i == 0) {
-                return;
-            }
+        DataInputStream in = getData("JSONObjectsAndFiles.flo");
 
-
-            //blocks = new BlockType[i];
-            for (int j = 0; j < i; ++j) {
-                //blocks[j] = a.readObject();
-                blocksnew.add(a.readObject());
-                // System.out.println(blocksnew.get(j));
-
-            }
-            blocksnew.sort(BlockType.comparator); // Sort after reading
-            
-            // ------------ Main Part START ------------
-
-            int maxx = (int) sqrt(blocksnew.size())-1;
-
-            int yy = 0;
-            int xx = 0;
-
-            for (BlockType ii : blocksnew) {
-                AbstractStatement as = (AbstractStatement) ii;
-                as.x = xx * 8;
-                as.y = yy * 6;
-
-                if (ii instanceof NotificationShow) {
-                    NotificationShow ns = (NotificationShow) ii;
-                    System.out.println(ns.message.prettyPrint(0));
-                }
-
-                if (xx < maxx) {
-                    xx++;
-                }
-                else {
-                    yy++;
-                    xx = 0;
-                }
-            }
-
-            
-            // ------------ Main Part END ------------
-            
-
-
-
-            DataOutputStream out = new DataOutputStream(new FileOutputStream("auto-generated.flo"));
-
-            ObjectWriter b = new ObjectWriter(out);
-            writeFileHeader(b);
-
-
-            blocksnew.sort(BlockType.comparator); // Sort before writing
-            for (int length = blocksnew.size(), ii = 0; ii < length; ++ii) {
-                b.writeObject(blocksnew.get(ii));
-            }
-
-        } catch (IOException e) {
-            System.out.println(e.toString());
+        ObjectReader a = new ObjectReader(in);
+        final int i = readerFileHeader(a, true);
+        if (i == 0) {
+            return;
         }
+
+
+        //blocks = new BlockType[i];
+        for (int j = 0; j < i; ++j) {
+            //blocks[j] = a.readObject();
+            blocksnew.add(a.readObject());
+            // System.out.println(blocksnew.get(j));
+
+        }
+        blocksnew.sort(BlockType.comparator); // Sort after reading
+
+        // ------------ Main Part START ------------
+
+        int maxx = (int) sqrt(blocksnew.size())-1;
+
+        int yy = 0;
+        int xx = 0;
+
+        for (BlockType ii : blocksnew) {
+            AbstractStatement as = (AbstractStatement) ii;
+            as.x = xx * 8;
+            as.y = yy * 6;
+
+            if (ii instanceof NotificationShow) {
+                NotificationShow ns = (NotificationShow) ii;
+                System.out.println(ns.message.prettyPrint(0));
+            }
+
+            if (xx < maxx) {
+                xx++;
+            }
+            else {
+                yy++;
+                xx = 0;
+            }
+        }
+
+
+        // ------------ Main Part END ------------
+
+
+
+
+        DataOutputStream out = new DataOutputStream(new FileOutputStream("auto-generated.flo"));
+
+        ObjectWriter b = new ObjectWriter(out);
+        writeFileHeader(b);
+
+
+        blocksnew.sort(BlockType.comparator); // Sort before writing
+        for (int length = blocksnew.size(), ii = 0; ii < length; ++ii) {
+            b.writeObject(blocksnew.get(ii));
+        }
+
 
     }
 
