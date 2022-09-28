@@ -20,7 +20,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        DataInputStream in = getData("JSONObjectsAndFiles.flo");
+        DataInputStream in = getData("AutomatOS.flo");
 
         ObjectReader a = new ObjectReader(in);
         final int i = readerFileHeader(a, true);
@@ -39,6 +39,8 @@ public class Main {
         blocksnew.sort(BlockType.comparator); // Sort after reading
 
         // ------------ Main Part START ------------
+
+
 
         int maxx = (int) sqrt(blocksnew.size())-1;
 

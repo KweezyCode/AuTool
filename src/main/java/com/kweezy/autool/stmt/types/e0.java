@@ -6,7 +6,7 @@ import com.kweezy.autool.stmt.interfaces.AutomateField;
 
 import java.io.IOException;
 
-public class e0 implements AutomateField { // Dictionary???
+public class e0 implements AutomateField { // Dictionary??? // TODO: Rename
     public AutomateField[] x0;
     public ConversionType[] x1;
     public AutomateField[] y0;

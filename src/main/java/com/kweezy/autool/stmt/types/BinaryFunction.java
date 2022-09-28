@@ -2,7 +2,7 @@ package com.kweezy.autool.stmt.types;
 
 import com.kweezy.autool.stmt.Formatting;
 import com.kweezy.autool.stmt.interfaces.functionName;
-import com.kweezy.autool.stmt.types.TwoFields;
+import com.kweezy.autool.stmt.types.fieldcount.TwoFields;
 
 public abstract class BinaryFunction extends TwoFields implements functionName
 {

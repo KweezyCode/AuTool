@@ -20,4 +20,18 @@ public abstract class IntermittentAction extends Action
         super.writeData(b);
         b.writeObject(this.continuity);
     }
+
+    protected final void I(final ObjectReader a, final int n) throws IOException {
+        super.readData(a);
+        if (n <= a.version()) {
+            this.continuity = a.readObject();
+        }
+    }
+
+    protected final void J(final ObjectWriter b, final int n) throws IOException {
+        super.writeData(b);
+        if (n <= b.version()) {
+            b.writeObject(this.continuity);
+        }
+    }
 }

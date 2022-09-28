@@ -1,30 +1,26 @@
-package com.kweezy.autool.stmt.types;
+package com.kweezy.autool.stmt.blocks;
 
 import com.kweezy.autool.ObjectReader;
 import com.kweezy.autool.ObjectWriter;
+import com.kweezy.autool.stmt.actions.EmailAction;
 import com.kweezy.autool.stmt.interfaces.AutomateField;
 
 import java.io.IOException;
 
-public abstract class OneField implements AutomateField
+public final class GmailSend extends EmailAction // implements AsyncStatement, Statement
 {
-    public AutomateField first;
-
-    public OneField() {
-    }
-
-    public OneField(final AutomateField first) {
-        this.first = first;
-    }
+    public AutomateField account;
 
     @Override
     public void readData(final ObjectReader a) throws IOException {
-        this.first = a.readObject();
+        super.readData(a);
+        this.account = a.readObject();
     }
 
     @Override
     public void writeData(final ObjectWriter b) throws IOException {
-        b.writeObject(this.first);
+        super.writeData(b);
+        b.writeObject(this.account);
     }
-
 }
+

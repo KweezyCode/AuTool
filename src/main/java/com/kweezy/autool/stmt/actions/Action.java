@@ -21,4 +21,18 @@ public abstract class Action extends AbstractStatement {
         super.writeData(b);
         b.writeObject(this.onComplete);
     }
+
+    protected final void B(final ObjectReader a, final int n) throws IOException {
+        super.readData(a);
+        if (n <= a.version()) {
+            this.onComplete = a.readObject();
+        }
+    }
+
+    protected final void C(final ObjectWriter b, final int n) throws IOException {
+        super.writeData(b);
+        if (n <= b.version()) {
+            b.writeObject(this.onComplete);
+        }
+    }
 }

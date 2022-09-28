@@ -1,6 +1,8 @@
 package com.kweezy.autool.stmt;
 
 import com.kweezy.autool.stmt.interfaces.AutomateField;
+import com.kweezy.autool.stmt.interfaces.customValue;
+import com.kweezy.autool.stmt.types.ObjectArray;
 
 public class Formatting {
 
@@ -106,6 +108,42 @@ public class Formatting {
         }
     }
 
+    public static boolean h0(final Object o) {
+        final boolean b = false;
+        final boolean b2 = false;
+        boolean b3 = false;
+        if (o == null) {
+            return false;
+        }
+        if (o instanceof Number) {
+            return g0(((Number)o).doubleValue());
+        }
+        if (o instanceof CharSequence) {
+            if (((CharSequence)o).length() != 0) {
+                b3 = true;
+            }
+            return b3;
+        }
+        if (o instanceof ObjectArray) {
+            boolean b4 = b;
+            if (((ObjectArray)o).size() != 0) {
+                b4 = true;
+            }
+            return b4;
+        }
+        // if (o instanceof com.llamalab.automate.expr.e) { // TODO: Implement method ASAP!
+        //     boolean b5 = b2;
+        //     if (((com.llamalab.automate.expr.e)o).size() != 0) {
+        //         b5 = true;
+        //     }
+        //     return b5;
+        // }
+        if (o instanceof Boolean) {
+            return (boolean)o;
+        }
+        return o instanceof customValue && h0(((customValue)o).value());
+    }
+
     public static String n0(int i, String str, final AutomateField... array) { // TODO: Rename
         final StringBuilder sb = new StringBuilder();
         int n = 0;
@@ -153,6 +191,27 @@ public class Formatting {
         return sb.toString();
     }
 
+    public static String T0(final Object o, final String s) {
+        if (o == null) {
+            return s;
+        }
+        if (o instanceof String) {
+            return (String)o;
+        }
+        if (o instanceof Number) {
+            return FormatNumber(((Number)o).doubleValue());
+        }
+        if (o instanceof customValue) {
+            return S0(((customValue)o).value());
+        }
+        return o.toString();
+    }
+
+    public static String S0(final Object o) {
+        return T0(o, "null");
+    }
+
+
     public static String constantString(final CharSequence charSequence, final int n) {
         final int length = charSequence.length();
         final StringBuilder sb = new StringBuilder(length + 8);
@@ -176,6 +235,7 @@ public class Formatting {
         }
         return n;
     }
+
     public static String FormatNumber(final double d) {
         if (d != d) {
             return "NaN";
@@ -198,5 +258,9 @@ public class Formatting {
             s = Double.toString(d);
         }
         return s;
+    }
+
+    public static boolean g0(final double n) {
+        return n == n && n != 0.0;
     }
 }

@@ -1,6 +1,7 @@
-package com.kweezy.autool.stmt.types;
+package com.kweezy.autool.stmt.types.fieldcount;
 
 import com.kweezy.autool.stmt.interfaces.AutomateField;
+import com.kweezy.autool.stmt.types.fieldcount.TwoFields;
 
 public abstract class CompareTwoFields extends TwoFields
 {

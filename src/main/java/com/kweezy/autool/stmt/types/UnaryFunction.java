@@ -3,6 +3,7 @@ package com.kweezy.autool.stmt.types;
 import com.kweezy.autool.stmt.Formatting;
 import com.kweezy.autool.stmt.interfaces.AutomateField;
 import com.kweezy.autool.stmt.interfaces.functionName;
+import com.kweezy.autool.stmt.types.fieldcount.OneField;
 
 public abstract class UnaryFunction extends OneField implements functionName
 {

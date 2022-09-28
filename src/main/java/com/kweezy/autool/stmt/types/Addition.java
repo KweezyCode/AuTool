@@ -1,5 +1,7 @@
 package com.kweezy.autool.stmt.types;
 
+import com.kweezy.autool.stmt.types.fieldcount.TwoFields;
+
 public final class Addition extends TwoFields
 {
     // public Double e(final y0 y0) {

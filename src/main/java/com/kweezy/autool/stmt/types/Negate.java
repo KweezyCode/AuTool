@@ -1,6 +1,6 @@
 package com.kweezy.autool.stmt.types;
 
-import com.kweezy.autool.stmt.types.OneField;
+import com.kweezy.autool.stmt.types.fieldcount.OneField;
 
 public final class Negate extends OneField
 {

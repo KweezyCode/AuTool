@@ -18,7 +18,7 @@ public abstract class Decision extends AbstractStatement {
         super.readData(a);
         this.onPositive = a.readObject();
         this.onNegative = a.readObject();
-        this.C(a);
+        this.readDataEmpty(a);
     }
 
     @Override
@@ -26,13 +26,13 @@ public abstract class Decision extends AbstractStatement {
         super.writeData(b);
         b.writeObject(this.onPositive);
         b.writeObject(this.onNegative);
-        this.K(b);
+        this.writeDataEmpty(b);
     }
 
-    protected void C(final ObjectReader a) {
+    protected void readDataEmpty(final ObjectReader a) throws IOException {
     }
 
-    protected void K(final ObjectWriter b) {
+    protected void writeDataEmpty(final ObjectWriter b) throws IOException {
     }
 
     protected final void B(final ObjectReader a, final int n) throws IOException {
@@ -41,7 +41,7 @@ public abstract class Decision extends AbstractStatement {
         if (n <= a.version()) {
             this.onNegative = a.readObject();
         }
-        this.C(a);
+        this.readDataEmpty(a);
     }
 
     protected final void J(final ObjectWriter b, final int n) throws IOException {
@@ -50,6 +50,6 @@ public abstract class Decision extends AbstractStatement {
         if (n <= b.version()) {
             b.writeObject(this.onNegative);
         }
-        this.K(b);
+        this.writeDataEmpty(b);
     }
 }

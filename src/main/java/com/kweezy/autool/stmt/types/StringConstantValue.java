@@ -14,6 +14,14 @@ public final class StringConstantValue implements customValue<String> {
     public StringConstantValue() {
     }
 
+    public StringConstantValue(final CharSequence charSequence) {
+        this.str = charSequence.toString();
+    }
+
+    public StringConstantValue(final String str) {
+        this.str = str;
+    }
+
     @Override
     public void readData(final ObjectReader a) throws IOException {
         this.str = a.readUTF();
